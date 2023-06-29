@@ -10,23 +10,55 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
+    
+    @State var viewModel = RickAndMortyViewModel()
+    
     var body: some View {
         NavigationSplitView {
-            List {
-                Text("Item")
+            List(viewModel.characters) { character in
+                NavigationLink(destination: DetailView(character: character)) {
+                    HStack {
+                        AsyncImage(url: character.image ?? URL(string: "")) { image in
+                            image
+                                .resizable()
+                                .frame(width: 145,height: 145, alignment: .center)
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        VStack(alignment: .leading, spacing: 10) {
+                            Group {
+                                Text(character.name ?? "N/A")
+                                    .font(.title)
+                                    .bold()
+                                Text(character.species?.rawValue ?? "N/A")
+                                    .font(.title2)
+                            }
+                        }
+                    }
+                }
             }
-            .navigationTitle("Sidebar")
+            .navigationTitle("Personajes")
         } detail: {
             VStack {
-                Model3D(named: "Scene", bundle: realityKitContentBundle)
-                    .padding(.bottom, 50)
-
-                Text("Hello, world!")
+              Text("Elige un personaje")
             }
-            .navigationTitle("Content")
-            .padding()
         }
+
+        .padding()
+        .ornament(attachmentAnchor: .scene(alignment: .bottom)) {
+            VStack {
+                Text("Detalle del personaje")
+            }
+            .frame(width: 400, height: 60)
+            .background(.green)
+            .glassBackgroundEffect()
+            
+        }
+        
+        
     }
+        
 }
 
 #Preview {

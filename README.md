@@ -5,4 +5,4 @@ Primer acercamiento a las visionOS utilizando la api de Rick and Morty.
 
 
 
-![alt text](Screenshots/FirstAppVisionOS.png)
+![alt text](Screenshots/FirstAppVisionOS.png)![alt text](Screenshots/FirstAppVisionOSDetail.png)

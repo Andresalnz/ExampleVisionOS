@@ -27,6 +27,7 @@
 		9F0CC4332A4AFAA100C189DF /* RickAndMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyModel.swift; sourceTree = "<group>"; };
 		9F0CC4352A4AFAD900C189DF /* RickAndMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyViewModel.swift; sourceTree = "<group>"; };
 		9F0CC4372A4B07BC00C189DF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		9F6D320A2A4D81CE00FF7DF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		9F0CC4152A4AF63F00C189DF = {
 			isa = PBXGroup;
 			children = (
+				9F6D320A2A4D81CE00FF7DF8 /* README.md */,
 				9F0CC4202A4AF63F00C189DF /* FirsExampleVision */,
 				9F0CC4212A4AF63F00C189DF /* Packages */,
 				9F0CC41F2A4AF63F00C189DF /* Products */,

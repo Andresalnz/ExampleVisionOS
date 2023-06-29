@@ -45,7 +45,7 @@ struct ContentView: View {
             }
         }
 
-        .padding()
+        //.padding()
         .ornament(attachmentAnchor: .scene(alignment: .bottom)) {
             VStack {
                 Text("Detalle del personaje")
